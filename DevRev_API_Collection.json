@@ -1,0 +1,326 @@
+{
+  "info": {
+    "_postman_id": "YOUR_COLLECTION_ID",
+    "name": "DevRev API Calls",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Articles List",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{API_BASE_URL}}/articles.list",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "articles.list"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Article",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owned_by\": [\n    \"SYSU-1\"\n  ],\n  \"resource\": {\n    \"url\": \"safc.com\"\n  },\n  \"title\": \"new signings article\",\n  \"status\": \"review_needed\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/articles.create",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "articles.create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Article 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owned_by\": [\n    \"SYSU-1\"\n  ],\n  \"resource\": {\n    \"url\": \"bbc.co.uk\"\n  },\n    \"title\": \"Enterprise SSO Authentication Failure - All Users Affected\",\n    \"description\": \"Complete SSO failure affecting all 500+ enterprise users. Unable to authenticate since 2PM EST. Business critical - blocking all productivity.\",\n    \"status\": \"review_needed\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/articles.create",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "articles.create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Article 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owned_by\": [\n    \"SYSU-1\"\n  ],\n  \"resource\": {\n    \"url\": \"nist.gov\"\n  },\n    \"title\": \"How do I bulk export customer data for compliance audit?\",\n    \"description\": \"We need to export all customer data for our quarterly compliance audit. Cannot find bulk export option in the UI. Need CSV format with all fields.\",\n    \"status\": \"review_needed\"\n} ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/articles.create",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "articles.create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Work Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"issue\",\n  \"title\": \"Sample API Task\",\n  \"body\": \"This task was created using the DevRev API\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/works.create",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "works.create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get User Info",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{API_BASE_URL}}/dev-users.self",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "dev-users.self"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Incidents",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/incidents.list",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "incidents.list"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Article",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"id\" : \"ART-1236\",\n        \"outhored_by\": [\n            \"SYSU-1\"\n        ],\n        \"title\": \"new signings article - published\",\n        \"status\": \"published\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/articles.update",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "articles.update"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Works List",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"type\": [\"ticket\"]}"
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/works.list",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "works.list"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Works Update",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n     \"work\": {\n        \"id\": \"TKT-8\",\n        \"title\": \"Updated Ticket Title\",\n        \"priority\": \"P2\",\n        \"type\": \"issue\",\n        \"state\": \"done\",\n        \"tags\": [\"bug\", \"frontend\"]\n        }\n     }"
+        },
+        "url": {
+          "raw": "{{API_BASE_URL}}/works.update",
+          "host": [
+            "{{API_BASE_URL}}"
+          ],
+          "path": [
+            "works.update"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "API_BASE_URL",
+      "value": "https://api.devrev.ai"
+    },
+    {
+      "key": "token",
+      "value": "YOUR_DEVREV_API_TOKEN"
+    }
+  ]
+}
